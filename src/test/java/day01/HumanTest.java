@@ -14,10 +14,14 @@ class HumanTest {
 
     void testHuman2() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
-                () -> new Human("Béla", 1878));
+                () -> new Human("Nagy Béla", 1878));
         assertEquals("Hibás adatok!", exception.getMessage());
-
     }
 
+    void testHuman3() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                () -> new Human("NagyBéla", 1978));
+        assertEquals("Hibás adatok!", exception.getMessage());
+    }
 
 }
